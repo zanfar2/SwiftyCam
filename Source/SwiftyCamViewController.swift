@@ -340,6 +340,8 @@ import AVFoundation
 
                let previewLayerConnection : AVCaptureConnection = connection
 
+	       updatePreviewLayer(layer: previewLayerConnection, orientation: .portrait)
+	       /*
                if previewLayerConnection.isVideoOrientationSupported {
 
                    switch (orientation) {
@@ -364,6 +366,7 @@ import AVFoundation
                        break
                    }
                }
+	       */
            }
        }
 
