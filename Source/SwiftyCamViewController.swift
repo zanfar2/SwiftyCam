@@ -1094,8 +1094,12 @@ import AVFoundation
     
     @available(iOS 10.0, *)
     private func capturePhoto(){
+	guard let device = videoDevice else {
+		return
+	}
+	    
         let options = AVCapturePhotoSettings()
-		if(flashEnabled){
+	if(device.hasFlash && flashEnabled){
             options.flashMode = .on
         }else {
             options.flashMode = .off
